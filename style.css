@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+.submit {
+    padding-left: 20px;
+}
+
+#app {
+    font-family: 'Nunito', sans-serif;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    color: #dbb8ff;
+    text-align: center;
+}
+
+ul {
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+    border: 1px solid #dbb8ff;
+    border-radius: 18px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #b669ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff898;
+    color: #b669ff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-top: 20px;
+    width: 70%;
+    border: 1px solid #fff898;
+    border-radius: 17px;
+}
+
+.add-btn {
+    padding: 10px;
+    width: 30%;
+    background-color: #fff898;
+    border: none;
+    border-radius: 3px;
+    color: #b669ff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-btn:hover {
+    filter: brightness(120%);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #b669ff;
+}
+
+
+.section-title {
+    padding: 10px;
+    background-color: #b669ff;
+    color: white;
+    text-transform: uppercase;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел на Vue.js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <add-task-form @add-task="addTask"></add-task-form>
+        <todo-list :tasks="tasks" @delete-task="deleteTask"></todo-list>
+    </div>
+
+    <script type="text/x-template" id="add-task-form-template">
+        <form @submit.prevent="submitTask">
+            <input v-model="newTaskTitle" placeholder="Новая задача">
+            <button type="submit">Добавить задачу</button>
+        </form>
+    </script>
+
+    <script type="text/x-template" id="todo-list-template">
+        <ul>
+            <li v-for="task in tasks" :key="task.id">
+                <input type="checkbox" :checked="task.completed" @change="toggleCompleted(task)">
+                <span :class="{ completed: task.completed }">{{ task.title }}</span>
+                <button @click="$emit('delete-task', task.id)">Удалить</button>
+            </li>
+        </ul>
+    </script>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
